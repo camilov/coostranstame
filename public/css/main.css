@@ -1,0 +1,31 @@
+.navbar-default {
+    
+    background: #0F05A6 !important;
+}
+
+.navbar{
+    border-radius: 0;
+    position: relative;
+    top: 20px;
+}
+
+.navbar-top a {
+    color: #fff !important;
+}
+
+.navbar-top a:hover{
+    
+    background: #f8f8f8 !important;
+    color : #0F05A6 !important;
+    
+}
+
+body{
+    background-image: url(http://www.laspaginasamarillasdecolombia.com/villavo/miweb/cootranstame/logo.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center !important;
+   /* background-size: cover;*/
+    background-color: #66999;
+
+}
