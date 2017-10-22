@@ -13,7 +13,7 @@ use DB;
 class CategoriaController extends Controller
 {
     public function __construct(){
-        
+       
     }
     
     public function index(Request $request){
