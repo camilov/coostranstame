@@ -31,4 +31,5 @@ class Zona extends Model
          return $this->hasMany('sisVentas\Asignacion');
 
       }
+
 }

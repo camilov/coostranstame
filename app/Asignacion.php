@@ -37,4 +37,8 @@ class Asignacion extends Model
    		return $this->belongsTo('sisVentas\Guia','idguia');
    	}
 
+   	public function cuadre(){
+
+   		return $this->hasMany('sisVentas\Cuadre');
+   	}
 }

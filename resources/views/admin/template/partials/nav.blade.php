@@ -27,7 +27,7 @@
         <li><a href="{{route('transportador.index')}}">Transportador </a></li>
         <li><a href="{{route('guia.index')}}">Guias manual</a></li>
         <li><a href="{{route('asignacion.index')}}">Asignacion guias</a></li>
-        <li><a href="#">Cuadre principal</a></li>
+        <li><a href="{{route('cuadre.create')}}">Cuadre principal</a></li>
         <li><a href="#">Servicio al cliente</a></li>
         <li><a href="#">Reportes</a></li>
         <li class="dropdown">

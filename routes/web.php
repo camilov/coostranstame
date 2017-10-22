@@ -64,6 +64,7 @@ Route::group(['prefix'=>'admin'/*,'middleware'=>['auth','RedirectIfAuthenticated
 	        'as'  => 'asignacion.destroy'
 	    ]);
 	
+	Route::resource('cuadre','CuadreController');
 	Route::get('/','UsersController@index');
 
 

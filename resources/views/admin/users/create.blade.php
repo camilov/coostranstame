@@ -16,7 +16,7 @@
         @endif
       
        {!! Form::open(['route'=>'users.store','method'=>'POST']) !!}
-        .<div></div>
+        
         <div class="form-group">
             {!! Form::label('name','name')!!}
             {!! Form::text('name',null,['class'=>'form-control','placeholder'=>'Nombre completo','required'])!!}

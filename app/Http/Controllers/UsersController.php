@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use sisVentas\User;
 use sisVentas\http\requests\UserRequest;
 use sisVentas\http\controllers\controller;
+use DB;
 
 class UsersController extends Controller
 {
@@ -15,7 +16,9 @@ class UsersController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
+
     {
+        
         $users =User::orderBy('id','ASC')->paginate(5);
         return view('admin.users.index')->with('users',$users);
     }
