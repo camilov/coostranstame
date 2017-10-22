@@ -18,4 +18,16 @@ class modeloZona extends TestCase
     {
         $this->assertTrue(true);
     }
+
+     public function testZona()
+	{
+    // Make call to application...
+
+    	$this->assertDatabaseHas('zona', [
+	    	'idzona' => 14,
+	        'zona' => 'meta',
+	        'idusuario' => 30,
+
+    	]);
+    }
 }

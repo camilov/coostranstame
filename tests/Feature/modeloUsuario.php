@@ -19,18 +19,6 @@ class modeloUsuario extends TestCase
         $this->assertTrue(true);
     }
 
-
-   public function testUsuario()
-	{
-    // Make call to application...
-
-    	$this->assertDatabaseHas('usuario', [
-	    	'ID' => 34,
-	        'name' => 'sally',
-	        'email' => 'sally@example.com',
-	        'password' => bcrytp('adsdi3812'),
-	        'tipo' => 'admin'
-
-    	]);
-    }
+   
 }
+   
