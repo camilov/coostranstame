@@ -18,7 +18,7 @@
             {!! Form::email('email',$user->email,['class'=>'form-control','placeholder'=>'Example@gmail.com','required'])!!}
         </div>
         
-        
+   aa     
         <div class="form-group">
             {!! Form::submit('Editar',['class'=>'btn btn-primary'])!!}
             
