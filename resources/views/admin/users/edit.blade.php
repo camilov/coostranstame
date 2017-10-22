@@ -17,6 +17,10 @@
             {!! Form::label('email','email')!!}
             {!! Form::email('email',$user->email,['class'=>'form-control','placeholder'=>'Example@gmail.com','required'])!!}
         </div>
+<<<<<<< HEAD
+=======
+        aa
+>>>>>>> user-history-4
         
         <div class="form-group">
             {!! Form::submit('Editar',['class'=>'btn btn-primary'])!!}
