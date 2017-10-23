@@ -18,4 +18,20 @@ class modeloTransportadorTest extends TestCase
     {
         $this->assertTrue(true);
     }
+
+
+    public function testTransportador()
+	{
+    // Make call to application...
+
+    	$this->assertDatabaseMissing('transportador', [
+	    	'idtransportador' => 8,
+	        'cedula' => 12313,
+	        'nombres' => 'Carlos',
+	        'apellidos' => 'rivera',
+	        'telefono'=>131341,
+	        'direccion'=>'cra 6 # 3-22',
+	        'idusuario'=>'30'
+    	]);
+    }
 }
