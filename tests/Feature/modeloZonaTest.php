@@ -23,7 +23,7 @@ class modeloZonaTest extends TestCase
 	{
     // Make call to application...
 
-    	$this->assertDatabaseHas('zona', [
+    	$this->assertDatabaseMissing('zona', [
 	    	'idzona' => 14,
 	        'zona' => 'meta',
 	        'ts' => '2017-10-21 20:42:00',
