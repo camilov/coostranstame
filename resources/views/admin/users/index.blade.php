@@ -28,7 +28,7 @@
     <table class="table table-striped">
         <thead>
             <th>ID</th>
-            <th>Nombre</th>
+            <th>Nombres</th>
             <th>Correo</th>
             <th>Tipo</th>
             <th>Accion</th>
