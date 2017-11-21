@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <link rel="stylesheet"  type="text/css" href="{{asset('/css/main.css')}}">
     <link rel="stylesheet"  href="{{asset('chosen2/chosen.css')}}">
+    <link rel="stylesheet" href="{{asset('css/AdminLTE.min.css')}}">
 </head>
    <body>
       @include('admin.template.partials.nav')

@@ -13,12 +13,12 @@ class Cuadre extends Model
 
    protected $fillable =[
 
-   		'asignacion'
+   		'idzona','fechainicial','fechafinal'
    ];
 
 
    public function zona(){
 
-   		return $this->belongsTo('sisVentas\Zona','asignacion');
+   		return $this->belongTo('sisVentas\Zona','idzona');
    }
 }

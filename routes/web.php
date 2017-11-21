@@ -61,13 +61,28 @@ Route::group(['prefix'=>'admin'/*,'middleware'=>['auth','RedirectIfAuthenticated
 	Route::resource('asignacion','AsignacionController');	
 	Route::get('asignacion/{idasignacion}/destroy',[
 	       'uses' => 'AsignacionController@destroy',
-	        'as'  => 'asignacion.destroy'
+	        'as'  => 'asignacion.destroy',
 	    ]);
 	
 	Route::resource('cuadre','CuadreController');
+	Route::get('vista-html-pdf',array(
+		    'as'=>'vistaHTMLPDF',
+		    'uses'=>'CuadreController@vistaHTMLPDF'
+		));
+	
+
+
 	Route::get('/','UsersController@index');
 
 
+
+
+	Route::get('export-users',array(
+		'as'=>'exportUsers',
+		'uses'=>'ExcelController@exportUsers'
+	));
+
+	
 
 Route::get('/home', 'HomeController@index')->name('home');
 

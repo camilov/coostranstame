@@ -26,52 +26,63 @@
 
 
     <!--<a href="{{route('transportador.create')}}" class="btn btn-info">Registrar nuevo Transportador</a><hr> -->
-    <table class="table table-striped">
-        <thead>
-            <th>Nro de guias</th>
-        </thead>        
-    </table>
-    <tbody>
-        @foreach($zona as $zonas)
-        <tr>
-            <td>{{$zonas->zona}}</td>
-
-        </tr>
-        @endforeach
-
-    </tbody>
-
-     <table class="table table-striped">
-           <thead>
-            <th>Total contraentrega</th>
-        </thead>
-        
-    </table>
-     <tbody>
-        @foreach($contado as $contados)
-        <tr>
-            <td>{{$contados->contado}}</td>
-
-        </tr>
-        @endforeach
-
-    </tbody>
-
-    <table class="table table-striped">
-           <thead>
-            <th>Total contado</th>
-        </thead>
-
-    </table>
-     <tbody>
-        @foreach($contra as $contras)
-        <tr>
-            <td>{{$contras->contra}}</td>
-
-        </tr>
-        @endforeach
-
-    </tbody>
+    
 
     
+    <div class="botones">
+               <div class="form-group">
+                    <a href="{{route('cuadre.index',['descargar'=>'pdf'])}}" target="_blank" class="btn btn-warning">Ver Pdf </a>
+                    <a href="{{route('cuadre.index',['descargar2'=>'excel'])}}" target="_blank" class="btn btn-warning">Ver Excel</a>
+
+               </div>
+      </div>
+      <?php if ($zona =="12"): ?>
+           <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="table-responsive">
+                  <table class="table table-striped table-bordered table-condensed table-hover">
+                    <thead>
+                      <th>Guias</th>
+                      <th>Forma pago</th>
+                      <th>Valor</th>
+                    </thead>
+                           @foreach ($resumen as $remisiones)
+                    <tr>
+                       <td>{{$remisiones->remision}}</td>
+                       <td>{{$remisiones->forma_pago}}</td>
+                       <td>{{$remisiones->valor_neto}}</td>
+                    </tr>
+                    @endforeach
+                  </table>
+                </div>
+              </div>
+            </div>
+         
+      <?php endif ?>
+
+    <?php if ($zona=='13'): ?>
+          <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="table-responsive">
+                  <table class="table table-striped table-bordered table-condensed table-hover">
+                    <thead>
+                      <th>Guias</th>
+                      <th>Forma pago</th>
+                      <th>Valor</th>
+                    </thead>
+                           @foreach ($resumen as $remisiones)
+                    <tr>
+                       <td>{{$remisiones->remision}}</td>
+                       <td>{{$remisiones->forma_pago}}</td>
+                       <td>{{$remisiones->valor_neto}}</td>
+                    </tr>
+                    @endforeach
+                  </table>
+                </div>
+               
+              </div>
+            </div>
+      
+    <?php endif ?>
+  
 @endsection

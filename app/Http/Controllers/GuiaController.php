@@ -6,6 +6,7 @@ use sisVentas\Tercero;
 use sisVentas\Zona;
 use Illuminate\Http\Request;
 use sisVentas\http\controllers\controller;
+use sisVentas\http\requests\guiaRequest;
 
 
 class GuiaController extends Controller
@@ -53,7 +54,7 @@ class GuiaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(guiaRequest $request)
     {
         $guia= new Guia($request->all());
         $guia->save();

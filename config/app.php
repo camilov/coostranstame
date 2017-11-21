@@ -178,6 +178,11 @@ return [
         sisVentas\Providers\EventServiceProvider::class,
         sisVentas\Providers\RouteServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        sisVentas\Providers\PdfServiceProvider::class,
+        niklasravnsborg\LaravelPdf\PdfServiceProvider::class,
+
+        Maatwebsite\Excel\ExcelServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
 
     ],
 
@@ -229,6 +234,9 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        //'PDF' => niklasravnsborg\LaravelPdf\Facades\Pdf::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+        'PDF' => Barryvdh\DomPDF\Facade::class,
 
     ],
 

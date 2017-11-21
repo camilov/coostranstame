@@ -47,9 +47,9 @@
                     </td>
                 </tr>
                 @endforeach
-
-
         </tbody>
     </table>
     {!!$asignacion->render()!!}
+
+    
 @endsection

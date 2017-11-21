@@ -2,27 +2,35 @@
 
 namespace sisVentas\Http\Controllers;
 
-
 use Illuminate\Http\Request;
-
 use sisVentas\User;
-use sisVentas\http\requests\usuarioRequest;
-use sisVentas\http\controllers\controller;
-use DB;
 
-class UsersController extends Controller
+class ExcelController extends Controller
 {
+    
+
+    public function exportUsers(){
+
+        Excel::create('Users', function($excel) {
+             
+                $users = User::all();
+             
+                $excel->sheet('Users', function($sheet) use($users) {
+             
+                $sheet->fromArray($users);
+             
+            });
+             
+            })->export('xlsx');
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
-
     {
-        
-        $users =User::orderBy('id','ASC')->paginate(5);
-        return view('admin.users.index')->with('users',$users);
+        //
     }
 
     /**
@@ -32,7 +40,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        return view('admin.users.create');
+        //
     }
 
     /**
@@ -41,15 +49,9 @@ class UsersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(usuarioRequest $request)
-    {   
-        
-        $user=new User($request->all());
-        $user->password=bcrypt( $request->password);;
-        $user->save();
-        $request->session()->flash('mensaje', 'Usuario Creado Con exito');
-        return redirect()->route('users.index');
-        
+    public function store(Request $request)
+    {
+        //
     }
 
     /**
@@ -71,8 +73,7 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        $user = User::findOrFail($id);
-        return view('admin.users.edit')->with('user',$user);
+        //
     }
 
     /**
@@ -84,12 +85,7 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $user=User::findOrFail($id);
-        $user->name =$request->name;
-        $user->email =$request->email;
-        $user->save();
-        session()->flash('messag',  'Usuario '.$user->name. ' ha sido Modificado.');
-        return redirect()->route('users.index');
+        //
     }
 
     /**
@@ -100,11 +96,6 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        $user = User::findOrFail($id);
-        $user->delete();
-        session()->flash('message',  'Usuario '.$user->name. ' ha sido eliminado.');
-        return redirect()->route('users.index');
-        
-        
+        //
     }
 }

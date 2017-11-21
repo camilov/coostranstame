@@ -1,7 +1,7 @@
 @extends('admin.template.main')
 
 
-@section('title','Crear guia')
+@section('title','Cierre de zonas')
 
 
 @section('content')
@@ -25,16 +25,23 @@
       
        {!! Form::open(['route'=>'cuadre.store','method'=>'POST']) !!}
         
-          
-
+            
+            <div class="form-group">
+                {!! Form::label('fecha inicial','fecha inicial: ')!!}
+                {!! Form::date('fechainicial',$dt1)!!}
+            </div>
+            
+            <div class="form-group">
+                {!! Form::label('fecha final','fecha final: ')!!}
+                {!! Form::date('fechafinal',$dt1)!!}
+            </div>
              <div class="form-group">
                 {!! Form::label('idzona','zona')!!}
                 {!! Form::select('idzona',$zona,null,['class'=>'form-control','placeholder'=>'Selecciona zona que desea cerrar','required'])!!}
             </div>
-
-        
+      
             <div class="form-group">
-                {!! Form::submit('Cerrar',['class'=>'btn btn-primary'])!!}
+                {!! Form::submit('Cargar',['class'=>'btn btn-primary'])!!}
             
         </div>
         {!! Form::close() !!}

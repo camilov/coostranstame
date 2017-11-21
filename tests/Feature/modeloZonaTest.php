@@ -26,10 +26,18 @@ class modeloZonaTest extends TestCase
     	$this->assertDatabaseMissing('zona', [
 	    	'idzona' => 14,
 	        'zona' => 'meta',
-	        'ts' => '2017-10-21 20:42:00',
-	        'idusuario' => 30,
-
+            'ts' => '2017-10-21 20:42:00',
+            'idusuario' => 30,
     	]);
+    }
+
+    public function testZona2(){
+
+        $this->assertDatabaseHas('zona',[
+
+            'idzona'=>12,
+        ]);
+
     }
 
 }

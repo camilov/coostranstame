@@ -18,9 +18,6 @@
       <ul class="nav navbar-nav">
     <!--  @if(Auth::user())  -->
          
- 
-       
-        <li><a href="#">Inicio </a></li>
         <li><a href="{{route('users.index')}}">Usuario</a></li>
         <li><a href="{{route('tercero.index')}}">Terceros</a></li>
         <li><a href="{{route('zona.index')}}">Zonas</a></li>
@@ -28,8 +25,7 @@
         <li><a href="{{route('guia.index')}}">Guias manual</a></li>
         <li><a href="{{route('asignacion.index')}}">Asignacion guias</a></li>
         <li><a href="{{route('cuadre.create')}}">Cuadre principal</a></li>
-        <li><a href="#">Servicio al cliente</a></li>
-        <li><a href="#">Reportes</a></li>
+
         <li class="dropdown">
           <a href="#" class="dropdown-toogle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >{{Auth::user()->name}}<span class="caret"></span></a>
           <ul class="dropdown-menu">
