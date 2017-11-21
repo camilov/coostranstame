@@ -73,7 +73,7 @@ class CuadreController extends Controller
                     $pdf = PDF::loadView('vista-html-pdf',compact('zona','resumen'));
                     return $pdf->stream('reporte.pdf');
                 }
-                /*
+                
                 if($request->has('descargar2')){
 
                         $excel=  Excel::create('Resumen-Guias', function($excel) use($resumen,$zona) {
@@ -82,7 +82,7 @@ class CuadreController extends Controller
                             $excel->sheet('Resumen-Guias', function($sheet) use($resumen,$zona) {
                                 $sheet->loadView('excel')->with('resumen', $resumen)->with('zona',$zona);});
                         })->export('xlsx');
-                }*/
+                }
                     
                   if($zona=='12'){
                     return view('cuadre.index')->with('resumen', $resumen)->with('zona',$zona);

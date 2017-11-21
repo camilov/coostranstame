@@ -33,7 +33,6 @@
                <div class="form-group">
                     <a href="{{route('cuadre.index',['descargar'=>'pdf'])}}" target="_blank" class="btn btn-warning">Ver Pdf </a>
                     <a href="{{route('cuadre.index',['descargar2'=>'excel'])}}" target="_blank" class="btn btn-warning">Ver Excel</a>
-
                </div>
       </div>
       <?php if ($zona =="12"): ?>
