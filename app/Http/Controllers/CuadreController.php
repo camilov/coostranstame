@@ -99,9 +99,9 @@ class CuadreController extends Controller
      */
     public function create()
     {   
-        $dt1 = Carbon::now();
+        
         $zona= Zona::select('zona','idzona')->pluck('zona','idzona');
-        return view('cuadre.create')->with('zona',$zona)->with('dt1',$dt1);
+        return view('cuadre.create')->with('zona',$zona);
                                   
     }
 
