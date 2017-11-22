@@ -86,7 +86,7 @@ class CuadreController extends Controller
                 }
                     
                 if($request->has('descargar3')){
-                    Mail::send('vista-html-pdf', compact('resumen','zona'), function ($message) use ($resumen,$zona){
+                   $mail= Mail::send('vista-html-pdf', compact('resumen','zona'), function ($message) use ($resumen,$zona){
                         $message->subject('prueba');
                         $message->to('jorgemarioey91@gmail.com');
                     });
