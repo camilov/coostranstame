@@ -1,12 +1,13 @@
   <?php if ($zona =="12"): ?>
                 
-           @foreach($resumen as $remisiones)
+           
             <table>
-             <tr>
+             
              <th>Nro Guia</th>
              <th>Forma pago</th> 
              <th>Valor</th>
              </tr>
+             @foreach($resumen as $remisiones)
               <tr>
                 <td>{{$remisiones->remision}}</td>
                 <td>{{$remisiones->forma_pago}}</td>
@@ -21,8 +22,6 @@
     <?php endif ?>
 
     <?php if ($zona=='13'): ?>
-              
-           @foreach($resumen as $remisiones)
             
             <table>
              <tr> 
@@ -30,6 +29,7 @@
              <th>Forma pago</th> 
              <th>Valor</th>
              </tr>
+             @foreach($resumen as $remisiones)
               <tr>
                 <td>{{$remisiones->remision}}</td>
                 <td>{{$remisiones->forma_pago}}</td>
