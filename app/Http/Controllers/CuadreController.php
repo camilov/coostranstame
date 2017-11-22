@@ -13,6 +13,7 @@ use sisVentas\http\controllers\ExcelController;
 use DB;
 use PDF;
 use Excel;
+use Mail;
 use Carbon\Carbon;
     
 class CuadreController extends Controller
@@ -82,6 +83,13 @@ class CuadreController extends Controller
                             $excel->sheet('Resumen-Guias', function($sheet) use($resumen,$zona) {
                                 $sheet->loadView('excel')->with('resumen', $resumen)->with('zona',$zona);});
                         })->export('xlsx');
+                }
+                    
+                if($request->has('descargar3')){
+                    Mail::send('vista-html-pdf', compact('resumen','zona'), function ($message) use ($resumen,$zona){
+                        $message->subject('prueba');
+                        $message->to('jorgemarioey91@gmail.com');
+                    });
                 }
                     
                   if($zona=='12'){
